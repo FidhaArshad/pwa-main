@@ -1,13 +1,12 @@
 const invitation = {
-  
   names: "Prince Thomas & Anjana James",
-   countdownYear: 2026,
+  countdownYear: 2026,
   countdownMonth: 8,
   countdownDay: 12,
   countdownHourIst: 15,
   mapQuery: "St. Peter's Malankara Catholic Church",
   whatsappText:
-    "We warmly invite you to the wedding reception of Prince Thomas and Anjana James on Saturday, 12 September 2026, from 6:00 PM onwards at St. Peter's Malankara Catholic Church."
+    "Join us for the wedding of Prince Thomas and Anjana James on 12 September 2026 at 3:00 PM, followed by a reception at 6:00 PM at St. Gregorios Orthodox Valiya Pally, Pathanamthitta."
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -176,12 +175,12 @@ if (calendarBtn) {
 
   const isApple = isIOS || isMac;
 
-  const title = "Prince & Anjana Wedding";
+  const title = "Prince Thomas & Anjana James | Wedding Invitation";
   const description = invitation.whatsappText;
   const location = "St. Peter's Malankara Catholic Church";
 
-  const start = "20260704T103000Z"; // 4 PM IST
-  const end = "20260704T153000Z";   // 9 PM IST
+  const start = "20260912T093000Z"; // 3:00 PM IST
+  const end = "20260912T123000Z";   // 6:00 PM IST
 
   if (isApple) {
     // ✅ Apple devices → .ics
