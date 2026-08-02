@@ -4,7 +4,7 @@ const invitation = {
   countdownMonth: 8,
   countdownDay: 12,
   countdownHourIst: 15,
-  mapQuery: "St. Peter's Malankara Catholic Church",
+  mapQuery: "St.Peters Cathedral, Pathanamthitta",
   whatsappText:
     "Join us for the wedding of Prince Thomas and Anjana James on 12 September 2026 at 3:00 PM, followed by a reception at 6:00 PM at St. Gregorios Orthodox Valiya Pally, Pathanamthitta."
 };
@@ -177,7 +177,7 @@ if (calendarBtn) {
 
   const title = "Prince Thomas & Anjana James | Wedding Invitation";
   const description = invitation.whatsappText;
-  const location = "St. Peter's Malankara Catholic Church";
+  const location = "St.Peters Cathedral, Pathanamthitta";
 
   const start = "20260912T093000Z"; // 3:00 PM IST
   const end = "20260912T123000Z";   // 6:00 PM IST
