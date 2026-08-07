@@ -81,7 +81,7 @@ button {
   overflow: hidden;
   background:
     linear-gradient(145deg, rgba(250, 252, 248, 0.9), rgba(183, 214, 194, 0.7)),
-    url("assets/reception-hero.png") center / cover;
+    url("assets/thumpnail.jpg") center / cover;
   transition: opacity 800ms ease, visibility 800ms ease;
 }
 
@@ -257,7 +257,7 @@ button {
   background:
     linear-gradient(90deg, rgba(67, 85, 74, 0.1), rgba(67, 85, 74, 0.16) 44%, rgba(67, 85, 74, 0.1)),
     linear-gradient(180deg, rgba(250, 252, 248, 0.15), rgba(67, 85, 74, 0.5)),
-    url("assets/reception-hero.png") center / cover;
+    url("assets/thumpnail.jpg") center / cover;
   transform: scale(1.02);
   animation: slowBloom 18s ease-in-out infinite alternate;
 }
