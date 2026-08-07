@@ -6,7 +6,7 @@ const invitation = {
   countdownHourIst: 15,
   mapQuery: "St.Peters Cathedral, Pathanamthitta",
   whatsappText:
-    "Join us for the wedding of Prince Thomas and Anjana James on 12 September 2026 at 3:00 PM, followed by a reception at 6:00 PM at St. Gregorios Orthodox Valiya Pally, Pathanamthitta."
+    "Join us for the wedding of Prince Thomas and Anjana James on 12 September 2026 at 3:00 PM, followed by a reception at 5:30 PM at St. Gregorios Orthodox Valiya Pally, Pathanamthitta."
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -17,59 +17,9 @@ function setText(selector, value) {
 }
 
 //
-// 🎵 MUSIC (MP3 VERSION ONLY — FIXED)
-//
-function setupMusicButton() {
-  const button = document.querySelector("#musicToggle");
-  const audio = new Audio("assets/music.mp3");
-  audio.volume = 0.4;
-  audio.loop = true;
-
-  let isPlaying = false;
-
-  function startMusic() {
-    audio.play().catch(() => {});
-    isPlaying = true;
-    button.classList.add("is-playing");
-    button.setAttribute("aria-label", "Pause music");
-  }
-
-  function stopMusic() {
-    audio.pause();
-    isPlaying = false;
-    button.classList.remove("is-playing");
-    button.setAttribute("aria-label", "Play music");
-  }
-
-  button.addEventListener("click", () => {
-    if (isPlaying) stopMusic();
-    else startMusic();
-  });
-
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) {
-    // tab is minimized / switched
-    if (isPlaying) {
-      audio.pause();
-    }
-  } else {
-    // tab is active again
-    if (isPlaying) {
-      audio.play().catch(() => {});
-    }
-  }
-});
-  
-  return {
-    start: startMusic,
-    stop: stopMusic
-  };
-}
-
-//
 // ✉️ OPENING FIXED (THIS WAS BROKEN BEFORE)
 //
-function setupOpening(music) {
+function setupOpening() {
   const opening = $("#opening");
   const letter = $("#letter");
   const button = $("#openInvite");
@@ -77,7 +27,6 @@ function setupOpening(music) {
   function openInvitation() {
     opening.classList.add("opening--open");
     letter.setAttribute("aria-expanded", "true");
-    music.start();
 
     window.setTimeout(() => {
       opening.classList.add("hidden");
@@ -180,7 +129,7 @@ if (calendarBtn) {
   const location = "St.Peters Cathedral, Pathanamthitta";
 
   const start = "20260912T093000Z"; // 3:00 PM IST
-  const end = "20260912T123000Z";   // 6:00 PM IST
+  const end = "20260912T120000Z";   // 5:30 PM IST
 
   if (isApple) {
     // ✅ Apple devices → .ics
@@ -334,9 +283,7 @@ function setupConfetti() {
 //
 // 🚀 INIT (UNCHANGED)
 //
-const music = setupMusicButton();
-
-setupOpening(music);
+setupOpening();
 setupLinks();
 startCountdown();
 setupRevealAnimations();
